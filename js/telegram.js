@@ -1,11 +1,14 @@
 
 export class TelegramService {
   constructor() {
-    this.tg = window.Telegram.WebApp;
-    this.init();
+    this.tg = window.Telegram && window.Telegram.WebApp ? window.Telegram.WebApp : null;
+    if (this.tg) {
+      this.init();
+    }
   }
 
   init() {
+    if (!this.tg) return;
     this.tg.ready();
     this.tg.expand();
     
@@ -25,6 +28,7 @@ export class TelegramService {
   }
 
   updateTheme() {
+    if (!this.tg) return;
     const params = this.tg.themeParams;
     if (!params) return;
 
@@ -45,6 +49,7 @@ export class TelegramService {
   }
 
   showMainButton(text, onClick) {
+    if (!this.tg) return;
     this.tg.MainButton.setText(text);
     this.tg.MainButton.show();
     
@@ -58,6 +63,7 @@ export class TelegramService {
   }
 
   hideMainButton() {
+    if (!this.tg) return;
     this.tg.MainButton.hide();
     if (this.currentOnClick) {
         this.tg.MainButton.offClick(this.currentOnClick);
@@ -66,8 +72,7 @@ export class TelegramService {
   }
   
   hapticFeedback(style = 'light') {
-      if (this.tg.HapticFeedback) {
-          this.tg.HapticFeedback.impactOccurred(style);
-      }
+    if (!this.tg || !this.tg.HapticFeedback) return;
+    this.tg.HapticFeedback.impactOccurred(style);
   }
 }
