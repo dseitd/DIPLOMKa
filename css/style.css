@@ -69,7 +69,7 @@ body {
   width: 100%;
   pointer-events: none; /* Container is transparent to clicks */
   position: relative; /* Needed for absolute positioning of title */
-  height: 36px; /* Ensure container has height for vertical alignment */
+  height: 32px; /* Ensure container has height for vertical alignment */
   align-items: center; /* Vertically center buttons */
 }
 
@@ -154,16 +154,16 @@ body {
   color: white;
   border: none;
   /* Telegram button height is typically 32-36px for small controls */
-  height: 36px;
+  height: 32px;
   border-radius: 16px; /* Pill shape */
-  padding: 0 14px;
+  padding: 0 12px;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   cursor: pointer;
   /* Subtle shadow for depth */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
   /* Smooth transition for active state */
   transition: transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease;
   /* Prevent text selection */
@@ -200,21 +200,21 @@ body {
 
 /* Right button (Menu) specific styles */
 .nav-menu {
-  padding: 0 12px; /* Slightly less padding for icons only */
+  padding: 0 10px; /* Slightly less padding for icons only */
 }
 
 .nav-menu svg {
   margin-right: 0;
   margin-left: 6px;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .nav-menu svg:first-child {
   margin-left: 0;
   /* Down arrow slightly smaller */
-  width: 16px; 
-  height: 16px;
+  width: 14px; 
+  height: 14px;
 }
 
 .nav-title {
