@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Hoodie Body",
+    "image": "3D ассеты/HoodyBody.glb",
+    "category": "Hoodies",
+    "price": 4500
+  },
+  {
+    "id": 2,
+    "name": "Long Neck Shirt",
+    "image": "3D ассеты/LongNeckShirt.glb",
+    "category": "Shirts",
+    "price": 3200
+  },
+  {
+    "id": 3,
+    "name": "Scifipants",
+    "image": "3D ассеты/Scifipants.glb",
+    "category": "Pants",
+    "price": 5000
+  },
+  {
+    "id": 4,
+    "name": "Tracksuit v1",
+    "image": "3D ассеты/Tracksuitv1.glb",
+    "category": "Suits",
+    "price": 8000
+  },
+  {
+    "id": 5,
+    "name": "Oversized T-Shirt",
+    "image": "3D ассеты/bigOversizedtt.glb",
+    "category": "T-Shirts",
+    "price": 2500
+  },
+  {
+    "id": 6,
+    "name": "Wide Pants",
+    "image": "3D ассеты/wide_pants.glb",
+    "category": "Pants",
+    "price": 4200
+  }
+]
