@@ -69,7 +69,7 @@ body {
   width: 100%;
   pointer-events: none; /* Container is transparent to clicks */
   position: relative; /* Needed for absolute positioning of title */
-  height: 32px; /* Ensure container has height for vertical alignment */
+  height: 33px; /* Ensure container has height for vertical alignment */
   align-items: center; /* Vertically center buttons */
 }
 
@@ -79,21 +79,21 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 8px 12px;
-  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  padding: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   z-index: 1000;
 }
 
 .bottom-tab-bar__inner {
   background-color: var(--tg-theme-secondary-bg-color, #ffffff);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 18px;
+  border: 0;
+  border-radius: 0;
   display: flex;
   gap: 6px;
-  padding: 8px;
+  padding: 10px 12px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  box-shadow: none;
 }
 
 .tab-item {
@@ -131,13 +131,17 @@ body {
 }
 
 .tab-item.active {
-  background-color: var(--tg-theme-button-color, #3390ec);
-  color: var(--tg-theme-button-text-color, #ffffff);
+  background-color: transparent;
+  color: var(--tg-theme-text-color, #000000);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0;
+  border-radius: 0;
 }
 
 .tab-item.active .tab-item__icon {
-  background-color: var(--tg-theme-button-color, #3390ec);
-  color: var(--tg-theme-button-text-color, #ffffff);
+  background-color: transparent;
+  color: inherit;
 }
 
 .desktop-nav-items {
@@ -150,17 +154,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   background-color: #ff0000;
   color: white;
   border: none;
   /* Telegram button height is typically 32-36px for small controls */
-  height: 32px;
-  border-radius: 16px; /* Pill shape */
-  padding: 0 12px;
+  height: 33px;
+  border-radius: 16.5px; /* Pill shape */
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 13px;
-  line-height: 1;
+  line-height: 33px;
   cursor: pointer;
   /* Subtle shadow for depth */
   box-shadow: 0 2px 6px rgba(0,0,0,0.18);
@@ -188,10 +193,10 @@ body {
 }
 
 .nav-btn svg {
-  margin-right: 6px;
+  margin-right: 0;
   /* Ensure icons are crisp */
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   stroke-width: 2.5px; /* Slightly bolder for visibility on red */
   /* Prevent icon shrinking */
   flex-shrink: 0;
@@ -200,20 +205,33 @@ body {
 
 /* Right button (Menu) specific styles */
 .nav-menu {
-  padding: 0 10px; /* Slightly less padding for icons only */
+  width: 80px;
+  height: 33px;
+  padding: 0;
+  gap: 8px;
 }
 
 .nav-menu svg {
   margin-right: 0;
-  margin-left: 6px;
-  width: 16px;
-  height: 16px;
+  margin-left: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .nav-menu svg:first-child {
   margin-left: 0;
   /* Down arrow slightly smaller */
-  width: 14px; 
+  width: 12px; 
+  height: 12px;
+}
+
+.nav-close {
+  width: 107px;
+  height: 33px;
+}
+
+.nav-close svg {
+  width: 14px;
   height: 14px;
 }
 
